@@ -1,3 +1,7 @@
+/* -------------------------------------------------------------------------- */
+/* ----------------------------HEADER NAVBAR--------------------------------- */
+/* -------------------------------------------------------------------------- */
+
 .main-navbar { 
     width:auto;
     height: 45px !important;
@@ -39,13 +43,15 @@
 .nav-left{
     float: left;    
 }
+/* -------------------------------------------------------------------------- */
 /* -----------SUB NAV BAR------------ */
-
+/* -------------------------------------------------------------------------- */
 .subnav{
   position: relative;
-  top: 20px;
+  margin: 20px 45px;
   display: flex;
   box-sizing: border-box;
+  z-index: 100;
 }
 
 .subnav-menu{
@@ -53,15 +59,16 @@
 }
 
 .subnav-menu a{
+  position: relative;
   font-size: 13px;
   color:#333333;
   text-decoration: none;
   margin-right:30px;
   font-family: 'Monserrat-Bold', sans-serif;
-  font-weight: 800;
 }
 
 .subnav li{
+  position: relative;
   display: inline-block;
 }
 
@@ -100,14 +107,41 @@
   right: 1;
 }
 
-.dropdown{
-  content: "\6b";
-  font-family: "untitled-font-1" !important;
-
+.dropdown::after{
+  border: solid #8d8d8d;
+  border-width: 0 2px 2px 0;
+  padding: 2px; 
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  position: absolute;
+  content: "";
+  top: 130%;
+  left: 2%;
 }
 
+.subnav-menu a:hover{
+  color: #00c8c8;
+}
 
-/* -----------------FONTS--------------- */
+.dropdown:hover::after{
+  border:solid #00c8c8;
+  border-width: 0 2px 2px 0;
+}
+
+.section-carrousel{
+  position: absolute;
+  top: 45px; 
+  width: 100%;
+}
+
+.container-fluid{
+  padding-left: 0% !important;
+  padding-right: 0% !important;
+}
+
+/* -------------------------------------------------------------------------- */
+/* -----------------FONTS ICONS---------------------------------------------- */
+/* -------------------------------------------------------------------------- */
 
 @font-face {
   font-family: "untitled-font-1";
@@ -192,8 +226,9 @@
 .icon-left-open:before {
   content: "\6e";
 }
-
+/* -------------------------------------------------------------------------- */
 /* fuentes locales */
+/* -------------------------------------------------------------------------- */
 
 @font-face {
   font-family: 'Monserrat';
