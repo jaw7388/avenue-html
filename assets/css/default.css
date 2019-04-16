@@ -48,9 +48,11 @@
 /* -------------------------------------------------------------------------- */
 .subnav{
   position: relative;
-  margin: 20px 45px;
+  margin-left: 45px;
+  margin-right: 45px;
   display: flex;
   box-sizing: border-box;
+  top: 45px;
   z-index: 100;
 }
 
@@ -129,14 +131,47 @@
 }
 
 .section-carrousel{
-  position: absolute;
-  top: 45px; 
+  position: relative;
+  margin-top: -45px; 
   width: 100%;
+  margin-bottom: 45px;  
 }
 
 .container-fluid{
   padding-left: 0% !important;
   padding-right: 0% !important;
+}
+
+/* --------------------SECONDARY NAVBAR---------------------- */
+
+.secondary-navbar{
+  margin-top: 20px;
+}
+
+.secondary-navbar li{
+  display: inline-block;
+  margin-right: 30px;
+}
+
+.secondary-navbar li a{
+  position: relative;
+  font-size: 13px;
+  color:#333333;
+  text-decoration: none;
+  margin-right:30px;
+  font-family: 'Monserrat-Bold', sans-serif;
+}
+
+.secondary-navbar li a:hover{
+  color: #00c8c8;
+}
+
+
+/* -----------------------ITEMS--------------------------- */
+.item-image{
+  max-width: 100%;
+  display: block;
+  margin: auto;
 }
 
 /* -------------------------------------------------------------------------- */
