@@ -1,3 +1,13 @@
+a:hover{
+  text-decoration: none;
+}
+
+.monserrbold{
+  font-family: 'Monserrat-Bold', sans-serif;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
 /* -------------------------------------------------------------------------- */
 /* ----------------------------HEADER NAVBAR--------------------------------- */
 /* -------------------------------------------------------------------------- */
@@ -43,6 +53,9 @@
 .nav-left{
     float: left;    
 }
+
+
+
 /* -------------------------------------------------------------------------- */
 /* -----------SUB NAV BAR------------ */
 /* -------------------------------------------------------------------------- */
@@ -52,7 +65,7 @@
   margin-right: 45px;
   display: flex;
   box-sizing: border-box;
-  top: 45px;
+  margin-top: 45px;
   z-index: 100;
 }
 
@@ -70,7 +83,6 @@
 }
 
 .subnav li{
-  position: relative;
   display: inline-block;
 }
 
@@ -84,11 +96,7 @@
 
 .monserreg{
   font-family: 'Monserrat', sans-serif;
-}
-
-.monserrbold{
-  font-family: 'Monserrat-Bold', sans-serif;
-  font-weight: 800;
+  text-transform: uppercase;
 }
 
 .nav-search{
@@ -130,9 +138,65 @@
   border-width: 0 2px 2px 0;
 }
 
+.mens-menu-wraper{
+  position: absolute;
+  -webkit-box-shadow: 0px 5px 16px -4px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 13px 16px -4px rgba(0,0,0,0.75);
+  box-shadow: 0px 13px 16px -7px rgba(0,0,0,0.75);
+  background: #f8f8f8;
+  margin-top: 15px;
+  display: none;
+}
+
+.women-menu-wraper{
+  position: absolute;
+  -webkit-box-shadow: 0px 5px 16px -4px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 13px 16px -4px rgba(0,0,0,0.75);
+  box-shadow: 0px 13px 16px -7px rgba(0,0,0,0.75);
+  background: #f8f8f8;
+  margin-top: 15px;
+  display: none;
+}
+
+.mens-menu{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 20px;
+  padding: 20px;
+  color: #8d8d8d;
+  background:#f8f8f8;
+}
+
+.mens-menu-list{
+  display: inline-block;
+  text-decoration: none;
+  list-style: none;
+  font-size: 12px;
+  padding: 0px 0px 0px 0px;
+  color: #8d8d8d;
+}
+
+.mens-menu-list li{
+  display: block !important;
+}
+
+.mens-menu-message{
+  grid-column: span 2;
+  text-align: center;
+  background: #333333;
+  color: #ffff;
+  padding: 10px 0px;
+}
+
+#subnav-women:hover div{
+  display: block;
+}
+
 .section-carrousel{
   position: relative;
-  margin-top: -45px; 
+  margin-top: -90px; 
   width: 100%;
   margin-bottom: 45px;  
 }
@@ -141,8 +205,9 @@
   padding-left: 0% !important;
   padding-right: 0% !important;
 }
-
+/* ------------------------------------------------------------- */
 /* --------------------SECONDARY NAVBAR---------------------- */
+/* ------------------------------------------------------------- */
 
 .secondary-navbar{
   margin-top: 20px;
@@ -174,6 +239,261 @@
   margin: auto;
 }
 
+.item-price{
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  color: #8d8d8d;
+  font-size: 15px;
+}
+
+.galeria-item:hover .item-info:before{
+  display: block
+}
+
+.galeria-item-doble:hover .item-info:before{
+  display: block
+}
+
+.item-info:before{
+  position: absolute !important;
+  top: 50%;
+  left: 45%;
+  font-size: 30px !important;
+  color: #ffff;
+  display: none;
+}
+
+.big-item{
+  background: #f8f8f8;
+  margin-top: 20px;
+}
+
+.galeria{
+  width: 50%;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: minmax(50px, auto);
+}
+
+.galeria li{
+  list-style: none;
+  background: #f8f8f8;
+  position: relative;
+}
+
+.galeria-item{
+  grid-row-end:auto;
+}
+
+.galeria-item:hover , .galeria-item-doble:hover{
+  -webkit-box-shadow: 0px 0px 11px -2px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 11px -2px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 11px -2px rgba(0,0,0,0.75);
+  z-index: 100;
+}
+
+.galeria-item-doble{
+  grid-column-end: span 2;
+}
+
+.galeria-item div{
+  background: #ffffff;
+  position: absolute;
+  width: 100%;  
+  padding: 10px 20px;
+  display: none;
+  font-size: 11px;
+  text-align: center;
+  z-index: 100;
+  word-break: break-all;
+  color: #8d8d8d;
+  -webkit-box-shadow: 0px 0px 11px -2px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 11px -2px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 11px -2px rgba(0,0,0,0.75);
+  z-index: 100;
+}
+
+.galeria-item div span{
+  display: table;
+  margin: 10px auto;
+}
+
+
+.galeria-item:hover div{
+  display: block;
+  z-index: 100;
+  /* -webkit-box-shadow: 0px 0px 11px -2px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 11px -2px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 11px -2px rgba(0,0,0,0.75); */
+}
+
+ i.item-icon:before {
+  color: #fff;
+  padding: 5px 5px;
+  background: #767679;
+  border-radius: 50px;
+  margin: 0px 5px;
+  font-size: 11px;
+}
+
+/* -------------------------------------------------------------------------- */
+/* ----------------------------lookbook------------------------------------- */
+/* -------------------------------------------------------------------------- */
+
+.lookbook{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 400px;
+  gap: 20px;
+}
+
+.item-lookbook{
+  position: relative;
+  background: #f8f8f8;
+  display: block;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 20px 20px 0px;
+}
+
+.item-lookbook-image {
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+}
+
+.item-lookbook-text {
+  max-width: 50%;
+  margin: 20px 20px 0px 28px;
+  display: flex;
+}
+
+.item-lookbook-text {
+  position: absolute;
+  display: block;
+  top: 20%;
+  right: 0%;
+  text-align: right;
+  color: #8d8d8d;
+}
+
+.item-lookbook-paragraph{
+  font-size: 11px;
+}
+
+.item-lookbook-button{
+  font-family: 'Monserrat', sans-serif;
+  text-transform: uppercase;
+  border: 1px solid #8d8d8d;
+  padding: 12px 20px 12px 20px;
+  text-align: center;
+  text-decoration: none;
+  color: #8d8d8d;
+  font-size: 12px;
+}
+
+.item-lookbook-button:hover{
+  border: #ffffff solid 1px;
+  color: #ffffff;
+  text-decoration: none;
+  background: #00c8c8;
+}
+
+.lookbook-image-men{
+  background-image: url(../img/lookbook-men.png);
+}
+
+.lookbook-image-woman{
+  background-image: url(../img/lookbook-woman.png);
+}
+
+.lookbook-image-you{
+  background-image: url(../img/lookbook-you.png);
+}
+/* -------------------------------------------------------------------------- */
+/* -------------------------footer---------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+
+footer{
+  background: #f8f8f8;
+  padding-top: 20px;
+  margin-top: 40px;
+}
+
+.footer-nav {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  margin: 20px 0px;
+  color: #8d8d8d;
+}
+
+.footer-list{
+  display: inline-block;
+  text-decoration: none;
+  list-style: none;
+  font-size: 12px;
+  padding: 0px 0px 0px 0px;
+  color: #8d8d8d;
+}
+
+.footer-list a{
+  color: #8d8d8d;
+  text-decoration: none;
+}
+
+.footer-list a{
+  color: #8d8d8d;
+  text-decoration: none;
+}
+
+.footer-list a:hover{
+  color: #00c8c8;
+  text-decoration: none;
+}
+
+.footer-social{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: auto;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.award-winner{
+  color: #ffffff;
+  background: #333333;
+  text-align: center;
+  padding: 40px 40px;
+  display: block;
+}
+
+.social-icons{
+  background: #00c8c8;
+  padding-top: 65px;
+  display: block;
+  text-align: center; 
+}
+
+.social-icons-buttons::before{
+  font-size: 30px !important;
+  color: #ffffff;
+  margin-right: 30px !important;
+}
+
+.copyright{
+  color: #8d8d8d;
+  display: block;
+  background: #333333;
+  font-size: 13px;
+  padding: 10px;  
+}
 /* -------------------------------------------------------------------------- */
 /* -----------------FONTS ICONS---------------------------------------------- */
 /* -------------------------------------------------------------------------- */
@@ -261,6 +581,16 @@
 .icon-left-open:before {
   content: "\6e";
 }
+.icon-heart-empty:before {
+  content: "\6f";
+}
+.icon-compress:before {
+  content: "\70";
+}
+.icon-info-circle:before {
+  content: "\71";
+}
+
 /* -------------------------------------------------------------------------- */
 /* fuentes locales */
 /* -------------------------------------------------------------------------- */
