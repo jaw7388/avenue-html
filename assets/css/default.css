@@ -1,3 +1,12 @@
+body{
+  font-size: 12px;
+  color: #8d8d8d;
+}
+
+h3{
+  font-size: 12px;
+}
+
 a:hover{
   text-decoration: none;
 }
@@ -392,9 +401,9 @@ a:hover{
   border: 1px solid #8d8d8d;
   padding: 12px 20px 12px 20px;
   text-align: center;
-  text-decoration: none;
   color: #8d8d8d;
   font-size: 12px;
+  display: inline-block;
 }
 
 .item-lookbook-button:hover{
@@ -522,6 +531,7 @@ footer{
   height: 400px;
   position: relative;
   margin-top: 20px;
+  margin-bottom: 40px;
   text-align: center;
   color: #ffffff;
 }
@@ -531,25 +541,47 @@ footer{
 }
 
 /* -------------------------------------------------------------------------- */
-/* -----------------FONTS ICONS---------------------------------------------- */
+/* -----------------BRAND CONTENT---------------------------------------------- */
 /* -------------------------------------------------------------------------- */
 
-.content{
-  display: flex;
+.brand-content{
+  margin: 40px 0px;
 }
 
-.brand-image{
-  width: 50%;
-  height: 350px;
-  display: block;
-  background-size: contain;
-  background-repeat: no-repeat;
+.brand-text{
+  vertical-align: middle;
 }
 
 .brand1{
   background-image: url(../img/brand-content1.jpg);
 }
 
+.brand2{
+  background-image: url(../img/brand-content2.jpg);
+}
+
+.brand3{
+  background-image: url(../img/brand-content3.jpg);
+}
+
+.brand-awards{
+  background-image: url(../img/brand-awards.png);
+}
+
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/* ---------------------LOCAL STORES----------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+
+.stores-text{
+  margin: 0px 10px;
+}
+
+#map{
+    height: 500px;
+  }
 
 /* -------------------------------------------------------------------------- */
 /* -----------------FONTS ICONS---------------------------------------------- */
