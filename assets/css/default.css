@@ -164,7 +164,9 @@ a:hover{
   box-shadow: 0px 13px 16px -7px rgba(0,0,0,0.75);
   background: #f8f8f8;
   margin-top: 15px;
-  display: none;
+  visibility: hidden;
+  transition: 0.1s 0.1s;
+
 }
 
 .mens-menu{
@@ -200,7 +202,8 @@ a:hover{
 }
 
 #subnav-women:hover div{
-  display: block;
+  visibility: visible;
+  transition-delay: 0.5s;
 }
 
 .section-carrousel{
@@ -582,7 +585,9 @@ footer{
 #map{
     height: 500px;
   }
-
+.location-wrap{
+  margin-top: 40px;
+}
 /* -------------------------------------------------------------------------- */
 /* -----------------FONTS ICONS---------------------------------------------- */
 /* -------------------------------------------------------------------------- */
