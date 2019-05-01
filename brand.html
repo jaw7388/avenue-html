@@ -1,58 +1,59 @@
 <html>
-    <head>
-            <link rel="stylesheet" href="assets/css/bootstrap-4.3.1-dist/css/bootstrap.min.css">
-            <!-- <link rel="stylesheet" href="fonts/styles.css"> -->
-            <link rel="stylesheet" href="assets/css/default.css">
-            
-            <script src="assets/css/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
-    </head>
-
-    <body>
-        <header>
-            <div class="main-navbar">
-                <div class="col-md-7 offset-md-2">
-                    <div class="container">
-                        <div class="nav-left">
-                            <ul> 
-                                <li>
-                                    <a href="">Currency:</a>
-                                </li>  
-                            </ul>
+        <head>
+                <link rel="stylesheet" href="assets/css/bootstrap-4.3.1-dist/css/bootstrap.min.css">
+                <!-- <link rel="stylesheet" href="fonts/styles.css"> -->
+                <link rel="stylesheet" href="assets/css/default.css">
+                <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+                <script src="assets/css/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+        </head>
+    
+        <body>
+            <header>
+                <div class="main-navbar">
+                    <div class="col-md-7 offset-md-2">
+                        <div class="container">
+                            <div class="nav-left">
+                                <ul> 
+                                    <li>
+                                        <a href="">Currency:</a>
+                                    </li>  
+                                </ul>
+                            </div>
+                            <div class="nav-right">
+                                <ul class="">
+                                    <li>
+                                        <a href="#">Register</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Sign In</a>
+                                    </li>
+                                    <li >
+                                        
+                                        <a class="navcar"  href="#">
+                                            <i class="icon-shopping-cart"></i>Empty
+                                            <i class="icon icon-down-open"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div> 
                         </div>
-                        <div class="nav-right">
-                            <ul class="">
-                                <li>
-                                    <a href="#">Register</a>
-                                </li>
-                                <li>
-                                    <a href="#">Sign In</a>
-                                </li>
-                                <li >
-                                    
-                                    <a class="navcar"  href="#">
-                                        <i class="icon-shopping-cart"></i>Empty
-                                        <i class="icon icon-down-open"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div> 
                     </div>
                 </div>
-            </div>
-        </header>
-<!-- ---------------------------------------------- -->
-<!-- ---------------SECONDARY MENU----------------- -->
-<!-- ---------------------------------------------- -->
-
-        <div class="container-fluid clearfix">
+            </header>
+    <!-- ---------------------------------------------- -->
+    <!-- ---------------SECONDARY MENU----------------- -->
+    <!-- ---------------------------------------------- -->
+    
+    <div class="container-fluid clearfix">
             <div class="subnav">
                 <div>
                     <a class="navlogo" href="index.html"></a>
                 </div>
                 <div class="subnav-menu">
                     <ul>
-                        <li>
-                            <a id="subnav-men" class="dropdown" href="">MEN</a>
+                        <li id="subnav-men">
+                            <a class="dropdown">MEN</a>
                             <div class="mens-menu-wraper">
                                 <div class="mens-menu">
                                     <ul class="mens-menu-list">
@@ -82,7 +83,7 @@
                         </li>
                         
                         <li id="subnav-women">
-                            <a class="dropdown" href="">WOMEN</a>
+                            <a class="dropdown">WOMEN</a>
                             <div class="women-menu-wraper">
                                 <div class="mens-menu">
                                     <ul class="mens-menu-list">
@@ -115,10 +116,32 @@
                             <a href="brand.html">THE BRAND</a>
                         </li>
                         <li>
-                            <a class="dropdown" href="local-stores.html">LOCAL STORES</a>
+                            <a href="local-stores.html">LOCAL STORES</a>
                         </li>
-                        <li>
+                        <li id="subnav-lookbook">
                             <a class="dropdown" href="lookbook.html">LOOK BOOK</a>
+                            <div class="lookbook-menu-wraper">
+                                <div class="mens-menu">
+                                    <ul class="mens-menu-list">
+                                            <li class="monserrbold">Our lookbooks</li>
+                                            <br>
+                                            <li><a href="">Latest Posts (mixed)</a></li>
+                                            <li><a href="">Men's Lookbook</a></li>
+                                            <li><a href="">Women's Lookbook</a></li>
+                                        </ul>
+                                        <ul class="mens-menu-list">
+                                            <li class="monserrbold">Your Lookbook</li>
+                                            <br>
+                                            <li><a href="">View and Edit</a></li>
+                                            <li><a href="">Share</a></li>
+                                            <li><a href="">Delete</a></li>
+                                        </ul>
+                                        <div class="mens-menu-message">
+                                            <h3 class="monserrbold">Autum sale</h3>
+                                            <h3 class="monserreg">UP to 50% off</h3>
+                                        </div>    
+                                </div>
+                            </div>
                         </li>
                     </ul>
                 </div>
@@ -130,7 +153,7 @@
                 </div>
             </div>
         </div>
-
+    
 <!-- --------------------------------------------------------------------------- -->
 <!-- ------------------------------BANNER-------------------------------------- -->
 <!-- --------------------------------------------------------------------------- -->
@@ -165,16 +188,16 @@
                         <img src="assets/img/brand-content3.jpg" alt="" class="img-fluid">
                     </div>
                     <div class="brand-text">
-                        <h5 class="monserrbold">Hand designed clothing</h5>
-                        <h6 class="monserreg">Established Lorem ipsum dolor sit amet consectetur</h6>
+                        <h3 class="monserrbold title">Hand designed clothing</h3>
+                        <h4 class="monserrbold subtitle">Established Lorem ipsum dolor sit amet consectetur</h4>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque debitis ipsam voluptates laborum id necessitatibus quidem odio est in. Officiis, sequi sit? Beatae suscipit error dolorum commodi a, sit soluta!</p> 
                     </div>
                 </div>
                     
                 <div class="col-md-6 d-flex flex-column justify-content-between">
                     <div class="brand-text">
-                        <h5 class="monserrbold">Hand designed clothing</h5>
-                        <h6 class="monserreg">Established Lorem ipsum dolor sit amet consectetur</h6>
+                        <h3 class="monserrbold title">Hand designed clothing</h3>
+                        <h4 class="monserrbold subtitle">Established Lorem ipsum dolor sit amet consectetur</h4>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque debitis ipsam voluptates laborum id necessitatibus quidem odio est in. Officiis, sequi sit? Beatae suscipit error dolorum commodi a, sit soluta!</p> 
                     </div>
                         
@@ -182,8 +205,8 @@
                         <img src="assets/img/brand-content2.jpg" alt="" class="img-fluid">
                     </div>
                     <div class="brand-text">
-                        <h5 class="monserrbold">Hand designed clothing</h5>
-                        <h6 class="monserreg">Established Lorem ipsum dolor sit amet consectetur</h6>
+                        <h3 class="monserrbold title">Hand designed clothing</h3>
+                        <h4 class="monserrbold subtitle">Established Lorem ipsum dolor sit amet consectetur</h4>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque debitis ipsam voluptates laborum id necessitatibus quidem odio est in. Officiis, sequi sit? Beatae suscipit error dolorum commodi a, sit soluta!</p> 
                     </div>
                     <span>
