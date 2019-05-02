@@ -1,23 +1,36 @@
 body{
-  font-size: 12px;
+  font-size: 13px;
   color: #8d8d8d;
 }
 
 .title{
   font-size: 15px;
+  margin-bottom: 20px;
 }
 
 .subtitle{
   font-size: 12px;
 }
 
-a:hover{
+a{
+  color: #8d8d8d;
   text-decoration: none;
+}
+
+a:hover{
+  color: #00c8c8;
+  text-decoration: none;
+}
+
+ul{
+  padding-left: 0px;
 }
 
 li{
   list-style: none;
 }
+
+
 
 footer{
   background: #f8f8f8;
@@ -36,12 +49,16 @@ footer{
 }
 
 hr{
-
+  margin: 40px 0px;
 }
 
 .anti-row{
   margin-right: 0px;
   margin-left: 0px;
+}
+
+.border-right{
+  border-right: 1px solid #dee2e6 !important;
 }
 /* -------------------------------------------------------------------------- */
 /* ----------------------------HEADER NAVBAR--------------------------------- */
@@ -136,11 +153,6 @@ hr{
 
 .nav-search{
   display: inline-block;
-}
-
-#search input{
-  padding: 0px 10px;
-  font-size: 15px;
 }
 
 #search button{
@@ -498,20 +510,7 @@ hr{
   color: #8d8d8d;
 }
 
-.footer-list a{
-  color: #8d8d8d;
-  text-decoration: none;
-}
 
-.footer-list a{
-  color: #8d8d8d;
-  text-decoration: none;
-}
-
-.footer-list a:hover{
-  color: #00c8c8;
-  text-decoration: none;
-}
 
 .footer-social{
   display: grid;
@@ -677,6 +676,10 @@ hr{
 /* -----------------LOOKBOOK---------------------------------------------- */
 /* -------------------------------------------------------------------------- */
 
+.wrap-lookbook{
+  margin-top: 40px;
+}
+
 .lookbook-grid{
   
   display: grid;
@@ -687,26 +690,42 @@ hr{
 
 .simple-item{
   display: block;
-  flex: 1 0 calc(25% - 10px); /* explanation below */
-  margin: 5px;
+  flex: 1 0 calc(25% - 20px); /* explanation below */
+  margin: 10px;
   min-height: 300px;
-  max-height: 50rv;
+  max-height: 50vh;
   background-color: #f8f8f8;
   position: relative;
 }
 
 .double-item{
   display: block;
-  flex: 1 0 calc(50% - 10px); /* explanation below */
-  margin: 5px;
+  flex: 1 0 calc(50% - 20px); /* explanation below */
+  margin: 10px;
   min-height: 300px;
-  max-height: 50rv;
+  max-height: 50vh;
   background-color: #f8f8f8;
   position: relative;
 }
 
-  .simple-item img, .double-item img{
-    width: 100%;
+.triple-item{
+  display: block;
+  flex: 1 0 calc(75% - 20px); /* explanation below */
+  margin: 10px;
+  min-height: 300px;
+  max-height: 50vh;
+  background-color: #f8f8f8;
+  position: relative;
+}
+
+  .simple-item img, .double-item img, .triple-item img{
+    height: 100%;
+    width: fit-content;
+    object-fit: cover;
+    overflow: hidden;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .full{
@@ -718,8 +737,146 @@ hr{
   }
 
   .full p{
-    width: 45%;
+    width: 40%;
   }
+
+  .new-look{
+    text-align: right;
+    position: absolute;
+    right: 0px;
+    top: 60px;
+    display: block;
+    color: #00c8c8;
+  }
+
+  .big-title{
+    font-size: 140px;
+    line-height: 0.8;
+  }
+  .big-subtitle{
+    font-size: 50px;
+    line-height: 0.8;
+  }
+
+/* -------------------------------------------------------------------------- */
+/* -----------------REGISTER---------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+
+.register a{
+  color: #00c8c8;
+}
+
+.register form{
+  margin-top: 30px;
+  position: relative;
+}
+
+.register input{
+  padding: 5px 10px;
+  font-size: 13px;
+  width: 100%;
+  color: #8d8d8d;
+  margin-bottom: 20px;
+  border: 1px solid #dee2e6!important;
+}
+
+.register-left{
+  padding: 0px 20px 0px 0px;
+}
+
+.register-right{
+  padding: 0px 0px 0px 20px;
+}
+
+.register-text{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;  
+  margin-top: 20px; 
+}
+
+.register-right-text{
+  display: inline-block;
+  width: 40%;
+  text-align: right;
+}
+
+
+/* custom checkbox */
+.control {
+  display: inline-block;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 5px;
+  padding-top: 3px;
+  cursor: pointer;
+}
+.control input {
+      position: absolute;
+      z-index: -1;
+      opacity: 0;
+  }
+.control_indicator {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background: rgb(0, 0, 0, 0);
+  border: 1px solid #dee2e6;
+}
+.control-radio .control_indicator {
+  border-radius: 0%;
+}
+
+.control:hover input ~ .control_indicator,
+.control input:focus ~ .control_indicator {
+  /* background: #cccccc; */
+  border: 1px solid #00c8c8;
+}
+
+.control input:checked ~ .control_indicator {
+  background: #00c8c8;
+}
+.control:hover input:not([disabled]):checked ~ .control_indicator,
+.control input:checked:focus ~ .control_indicator {
+  background: #0e6647d;
+}
+.control input:disabled ~ .control_indicator {
+  background: #e6e6e6;
+  opacity: 0.6;
+  pointer-events: none;
+}
+.control_indicator:after {
+  box-sizing: unset;
+  content: '';
+  position: absolute;
+  display: none;
+}
+.control input:checked ~ .control_indicator:after {
+  display: block;
+}
+.control-checkbox .control_indicator:after {
+  left: 8px;
+  top: 4px;
+  width: 3px;
+  height: 8px;
+  border: solid #ffffff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+.control-checkbox input:disabled ~ .control_indicator:after {
+  border-color: #7b7b7b;
+}
+
+/* -------------------------------------------------------------------------- */
+/* -----------------PRODUCT VIEW---------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+
+.product-span{
+  padding-right: 11px;
+  padding-left: 11px;
+}
 
 /* -------------------------------------------------------------------------- */
 /* -----------------FONTS ICONS---------------------------------------------- */
