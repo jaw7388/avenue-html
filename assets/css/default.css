@@ -873,10 +873,32 @@ hr{
 /* -----------------PRODUCT VIEW---------------------------------------------- */
 /* -------------------------------------------------------------------------- */
 
+.nav-link {
+  display: block;
+  padding: 10px 30px;
+}
+
 .product-span{
   padding-right: 11px;
   padding-left: 11px;
 }
+
+/* tab */
+
+.nav-pills .nav-link {
+  border-radius: 0px;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+  background-color: #333333;
+}
+
+.product-specifications{
+  display: inline-block;
+  margin-right: 20px;
+}
+
+
 
 /* -------------------------------------------------------------------------- */
 /* -----------------FONTS ICONS---------------------------------------------- */
