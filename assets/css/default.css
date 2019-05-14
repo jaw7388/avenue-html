@@ -10,6 +10,7 @@ body{
 
 .subtitle{
   font-size: 12px;
+  display: inline-block;
 }
 
 a{
@@ -111,11 +112,14 @@ hr{
 /* -------------------------------------------------------------------------- */
 /* -----------SUB NAV BAR------------ */
 /* -------------------------------------------------------------------------- */
+.subnav-items li{
+  margin-right: 20px;
+}
+
 .subnav{
   position: relative;
   margin-left: 45px;
   margin-right: 45px;
-  display: flex;
   box-sizing: border-box;
   margin-top: 45px;
   z-index: 100;
@@ -155,18 +159,23 @@ hr{
   display: inline-block;
 }
 
+#search input{
+  width: 150px;
+  padding: 2px 5px;
+}
+
 #search button{
   border: none;
   background: #ffffff;
-  width: 28px;
+  width: 25px;
   position: absolute;
-  height: 26px;
-  top: 0;
-  right: 0;
+  height: 25px;
+  top: 1;
+  right: 1;
 }
 
 .dropdown{
-  color: #333333 !important;
+  color: #8d8d8d !important;
   cursor: pointer;
 }
 .dropdown::after{
@@ -797,7 +806,7 @@ hr{
 
 .register-right-text{
   display: inline-block;
-  width: 40%;
+  width: 50%;
   text-align: right;
 }
 
@@ -872,6 +881,43 @@ hr{
 /* -------------------------------------------------------------------------- */
 /* -----------------PRODUCT VIEW---------------------------------------------- */
 /* -------------------------------------------------------------------------- */
+.product-banner{
+  color: #00c8c8;
+}
+
+/* rating-stars */
+
+.rating-static {
+  width: 80px;
+  height: 16px;
+  display: inline-block;
+  background: url('../img/rating-stars.png') 0 0 no-repeat;
+  vertical-align: text-top;
+}
+
+.rating-45 { background-position: 0 0; }
+.rating-35 { background-position: -16px 0; } 
+.rating-25 { background-position: -32px 0; }
+.rating-15 { background-position: -48px 0; }
+.rating-5 { background-position: -64px 0; }
+
+.rating-0 { background-position: -80px -17px; }
+ 
+.rating-10  { background-position: -64px -17px; }
+.rating-20 { background-position: -48px -17px; }
+.rating-30 { background-position: -32px -17px; }
+.rating-40 { background-position: -16px -17px; }
+.rating-50 { background-position: 0 -17px; }
+
+/* ^^^^^^^^^^^^^^^ rating-stars ^^^^^^^^^^^^^^^ */
+
+.product-tags{
+  margin: 20px 0px;
+}
+
+.product-share-icon::before{
+  margin-right: 3px !important  ;
+}
 
 .nav-link {
   display: block;
@@ -879,8 +925,8 @@ hr{
 }
 
 .product-span{
-  padding-right: 11px;
-  padding-left: 11px;
+  padding-right: 5px;
+  padding-left: 5px;
 }
 
 /* tab */
@@ -898,7 +944,180 @@ hr{
   margin-right: 20px;
 }
 
+.product-list li{
+  list-style: inside;
+}
 
+.product-price{
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+
+.product-button{
+  border: 1px solid #8d8d8d;
+  padding: 12px 20px;
+  margin-right: 20px;
+  text-align: center;
+  color: #8d8d8d;
+  font-size: 12px;
+  display: inline-block;
+  background: rgb(0, 0, 0, 0);
+  font-family: 'Monserrat-Bold', sans-serif;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.product-button:hover{
+  border: #333333 solid 1px;
+  color: #ffffff;
+  text-decoration: none;
+  background: #333333;
+}
+
+.wrap-product-specifications{
+  margin-top: 25px;
+  margin-bottom: 20px;
+}
+
+.rounded-icon::before{
+  background: #333333;
+  padding: 5px;
+  border-radius: 50px;
+  margin-right: 10px !important;
+  color: #fff !important;
+}
+
+/*+++++++++++select+++++++++++++++++++++++++ */
+/*the container must be positioned relative:*/
+.select-selected {
+  position: relative;;
+}
+
+.product-specifications {
+  position: relative;
+}
+
+.product-specifications select {
+  display: none; /*hide original SELECT element:*/
+}
+/*style the arrow inside the select element:*/
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: solid black;
+  border-width: 0 2px 2px 0;
+  padding: 2px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+/*point the arrow upwards when the select box is open (active):*/
+.select-selected.select-arrow-active:after {
+  transform: rotate(225deg);
+  -webkit-transform: rotate(225deg);
+}
+/*style the items (options), including the selected item:*/
+.select-items div,.select-selected {
+  padding: 8px 25px 8px 10px;
+  min-width: 100px;
+  border: 1px solid #3333;
+  cursor: pointer;
+  user-select: none;
+}
+/*style items (options):*/
+.select-items {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+/*hide the items when the select box is closed:*/
+.select-hide {
+  display: none;
+}
+
+.select-items div{
+  background: #ffff;
+}
+
+.select-items div:hover, .same-as-selected {
+  background-color: #dee2e6;
+  color: #8d8d8d;
+}
+/*+++++++++++end select+++++++++++++++++++++++++ */
+.quantity {
+  position: relative;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button
+{
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number]
+{
+  -moz-appearance: textfield;
+}
+
+.quantity input {
+  padding: 8px 10px 8px 10px;
+  border: 1px solid #3333;
+  user-select: none;
+  display: inline-block;
+}
+
+.quantity input:focus {
+  outline: 0;
+}
+
+.quantity-nav {
+  float: right;
+  position: relative;
+  height: 42px;
+}
+
+.quantity-button {
+  position: relative;
+  cursor: pointer;
+  border-left: 1px solid #eee;
+  width: 20px;
+  text-align: center;
+  color: #333;
+  font-size: 13px;
+  font-family: "Trebuchet MS", Helvetica, sans-serif !important;
+  line-height: 1.7;
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+.quantity-button.quantity-up {
+  position: absolute;
+  height: 50%;
+  top: 0;
+  border-bottom: 1px solid #eee;
+}
+
+.quantity-button.quantity-down {
+  position: absolute;
+  bottom: -1px;
+  height: 50%;
+}
+
+.wrap-description{
+  margin-top: 20px;
+}
 
 /* -------------------------------------------------------------------------- */
 /* -----------------FONTS ICONS---------------------------------------------- */
